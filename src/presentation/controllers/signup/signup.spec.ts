@@ -1,4 +1,8 @@
-import { InvalidParamError, MissingParamError, ServerError } from '../../errors'
+import {
+  InvalidParamError,
+  MissingParamError,
+  ServerError,
+} from '@/presentation/errors/index'
 import {
   AccountModel,
   AddAccount,
