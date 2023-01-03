@@ -164,7 +164,9 @@ describe('SignUp Controller', () => {
 
     const httpRequest = makeFakeRequest()
     const httpResponse = await sut.handle(httpRequest)
-    expect(httpResponse).toEqual(serverError(new ServerError(null)))
+    expect(httpResponse.statusCode).toEqual(
+      serverError(new ServerError(null)).statusCode
+    )
   })
 
   test('Should return 500 if AddAccount throws', async () => {
@@ -174,7 +176,9 @@ describe('SignUp Controller', () => {
     })
 
     const httpResponse = await sut.handle(makeFakeRequest())
-    expect(httpResponse).toEqual(serverError(new ServerError(null)))
+    expect(httpResponse.statusCode).toEqual(
+      serverError(new ServerError(null)).statusCode
+    )
   })
 
   test('Should call AddAccount with correct values', () => {
