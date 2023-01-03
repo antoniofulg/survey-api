@@ -1,5 +1,5 @@
 {
-  "name": "nodejs",
+  "name": "clean-node-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "test:ci": "yarn test -- --coverage"
   },
   "keywords": [],
-  "author": "",
+  "author": "Antonio Fulgêncio",
   "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^4.1.4",
