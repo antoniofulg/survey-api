@@ -4,9 +4,13 @@ import {
   serverError,
   unauthorized,
 } from '@/presentation/helpers/http-helper'
-import { Controller, HttpRequest, HttpResponse } from '@/presentation/protocols'
-import { EmailValidator } from '@/presentation/controllers/signup/signup-protocols'
-import { Authentication } from '@/data/usecases/authentication/authentication'
+import {
+  Authentication,
+  Controller,
+  EmailValidator,
+  HttpRequest,
+  HttpResponse,
+} from './login-protocols'
 
 export class LoginController implements Controller {
   private readonly emailValidator: EmailValidator
