@@ -3,6 +3,7 @@ import {
   badRequest,
   serverError,
   unauthorized,
+  ok,
 } from '@/presentation/helpers/http-helper'
 import {
   Authentication,
@@ -37,6 +38,8 @@ export class LoginController implements Controller {
 
       const accessToken = await this.authentication.auth(email, password)
       if (!accessToken) return unauthorized()
+
+      return ok({ accessToken })
     } catch (error) {
       return serverError(error)
     }
