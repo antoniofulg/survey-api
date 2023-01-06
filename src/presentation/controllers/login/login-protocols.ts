@@ -1,3 +1,3 @@
 export * from '@/presentation/protocols'
-export * from '@/data/usecases/authentication/authentication'
+export * from '@/domain/usecases/authentication'
 export * from '@/presentation/helpers/validators'
