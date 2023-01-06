@@ -1,4 +1,8 @@
-import { badRequest, ok, serverError } from '@/presentation/helpers/http-helper'
+import {
+  badRequest,
+  ok,
+  serverError,
+} from '@/presentation/helpers/http/http-helper'
 import {
   AddAccount,
   Controller,
