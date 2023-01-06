@@ -32,7 +32,7 @@ export class DbAuthentication implements Authentication {
           account.password
         )
       ) {
-        await this.tokenGenerator.generate(account.id)
+        return await this.tokenGenerator.generate(account.id)
       }
     }
     return null
