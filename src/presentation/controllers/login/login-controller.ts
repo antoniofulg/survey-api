@@ -13,10 +13,10 @@ import {
 } from './login-controller-protocols'
 
 export class LoginController implements Controller {
-  private readonly authentication: Authentication
-  private readonly validation: Validation
-
-  constructor(authentication: Authentication, validation: Validation) {
+  constructor(
+    private readonly authentication: Authentication,
+    private readonly validation: Validation
+  ) {
     this.authentication = authentication
     this.validation = validation
   }
