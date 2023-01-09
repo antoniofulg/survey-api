@@ -5,13 +5,13 @@ import {
   serverError,
   unauthorized,
 } from '@/presentation/helpers/http/http-helper'
-import { LoginController } from './login'
+import { LoginController } from './login-controller'
 import {
   Authentication,
   AuthenticationModel,
   HttpRequest,
   Validation,
-} from './login-protocols'
+} from './login-controller-protocols'
 
 const makeAuthentication = (): Authentication => {
   class AuthenticationStub implements Authentication {
