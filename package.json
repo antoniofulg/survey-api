@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && tsc && tsc-alias",
+    "build": "rimraf dist && tsc -p tsconfig.build.json && tsc-alias",
     "start": "node dist/main/server.js",
     "dev": "nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register src/main/server.ts' -e ts",
     "up": "yarn build && docker compose up -d",
