@@ -81,12 +81,12 @@ describe('Login Controller', () => {
     const { sut, authenticationStub } = makeSut()
     jest
       .spyOn(authenticationStub, 'auth')
-      .mockReturnValueOnce(new Promise((_, rejects) => rejects(new Error())))
+      .mockReturnValueOnce(
+        new Promise((_, reject) => reject(new ServerError(null)))
+      )
 
     const httpResponse = await sut.handle(makeFakeRequest())
-    expect(httpResponse.statusCode).toEqual(
-      serverError(new ServerError(null)).statusCode
-    )
+    expect(httpResponse).toEqual(serverError(new ServerError(null)))
   })
 
   test('Should return 200 if valid credentials are provided', async () => {
