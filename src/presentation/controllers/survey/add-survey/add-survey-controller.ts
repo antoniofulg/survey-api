@@ -1,5 +1,6 @@
 import {
   badRequest,
+  noContent,
   serverError,
 } from '@/presentation/helpers/http/http-helper'
 import {
@@ -25,7 +26,7 @@ export class AddSurveyController implements Controller {
         question,
         answers,
       })
-      return null
+      return noContent()
     } catch (error) {
       return serverError(error)
     }
